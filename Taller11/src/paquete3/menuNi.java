@@ -25,7 +25,7 @@ public class menuNi extends menu{
     }
 
     public String toString() {
-        String cadena = String.format("Menu de Ninos\n%s\n"
+        String cadena = String.format("Menu de Niños\n%s\n"
                 , super.toString()
         );
         cadena = String.format("%s\n"

@@ -31,9 +31,11 @@ public abstract class menu {
     }
     public String toString() {
         String inicio = String.format("Nombre del plato: %s\n"
+                        + "Valor Menu: %2s"
                         + "Valor del menu inicial: %.2f\n"
-                ,obtenerNombrePlato()
-                ,obtenerValorInicial()
+                ,nombrePlato
+                ,valorMenu
+                ,valorInicial
         );
         return inicio;
     }

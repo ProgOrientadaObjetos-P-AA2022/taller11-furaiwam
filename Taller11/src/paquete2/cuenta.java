@@ -54,10 +54,8 @@ public class cuenta {
 
         for(int i = 0; i < obtenerListaMenu().size();i++){
             c = String.format("%s"
-//                    + "%d"
                             + "%s\n"
                     ,c
-//                    ,i+1
                     ,obtenerListaMenu().get(i)
             );
         }
@@ -68,7 +66,7 @@ public class cuenta {
                         + "Total a pagar: %.2f\n"
                 ,c
                 ,obtenerSubTotal()
-                ,iva
+                ,obtenerIva()
                 ,obtenerValorCancelar()
         );
 
