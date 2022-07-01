@@ -1,6 +1,6 @@
 package paquete2;
 
-public abstract class menu {
+public abstract class Menu {
     protected String nombrePlato;
     protected double valorMenu;
     protected double valorInicial;
@@ -30,8 +30,8 @@ public abstract class menu {
         return  valorInicial;
     }
     public String toString() {
-        String inicio = String.format("Nombre del plato: %s\n"
-                        + "Valor Menu: %2s"
+        String inicio = String.format("Plato; : %s\n"
+                        + "Niños: %2s"
                         + "Valor del menu inicial: %.2f\n"
                 ,nombrePlato
                 ,valorMenu

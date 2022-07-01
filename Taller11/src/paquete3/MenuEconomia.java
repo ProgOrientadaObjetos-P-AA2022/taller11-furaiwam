@@ -1,8 +1,8 @@
 package paquete3;
-import paquete2.menu;
+import paquete2.Menu;
 
 
-public class menuEconomia extends menu{
+public class MenuEconomia extends Menu {
     private double descuentoP;
 
     public void establecerDescuentoP(double n){

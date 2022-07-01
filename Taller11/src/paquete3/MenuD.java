@@ -1,7 +1,7 @@
 package paquete3;
-import paquete2.menu;
+import paquete2.Menu;
 
-public class menuD extends menu {
+public class MenuD extends Menu {
     private double valorPos;
     private double valorBeb;
     public void establecerValorPostre(double v) {

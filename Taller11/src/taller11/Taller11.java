@@ -4,13 +4,12 @@
  * and open the template in the editor.
  */
 package taller11;
-import paquete2.cuenta;
-import paquete2.menu;
-import paquete3.menuCa;
-import paquete3.menuD;
-import paquete3.menuEconomia;
-import paquete3.menuNi;
-
+import paquete2.Cuenta;
+import paquete2.Menu;
+import paquete3.MenuCa;
+import paquete3.MenuD;
+import paquete3.MenuEconomia;
+import paquete3.MenuNi;
 import java.util.ArrayList;
 /**
  *
@@ -23,10 +22,10 @@ public class Taller11 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ArrayList<menu> listamenu=new ArrayList<>();
+        ArrayList<Menu> listamenu=new ArrayList<>();
 
         //Menu Carta
-        menuCa cart= new menuCa();
+        MenuCa cart= new MenuCa();
         cart.establecerNombrePlato("Encebollado");
         cart.establecerValorInicial(1.50);
         cart.establecerValorGuarnicion(2.50);
@@ -35,7 +34,7 @@ public class Taller11 {
         cart.calcularValorTotal();
 
         //Menu del dia
-        menuD di= new menuD();
+        MenuD di= new MenuD();
         di.establecerNombrePlato("Guata");
         di.establecerValorInicial(2.75);
         di.establecerValorPostre(1.00);
@@ -43,8 +42,8 @@ public class Taller11 {
         di.calcularValorTotal();
 
         //Menu de niños
-        menuNi munNi1 =new menuNi();
-        menuNi munNi2 =new menuNi();
+        MenuNi munNi1 =new MenuNi();
+        MenuNi munNi2 =new MenuNi();
 
         munNi1.establecerNombrePlato("Mote pillo");
         munNi1.establecerValorInicial(3.50);
@@ -59,7 +58,7 @@ public class Taller11 {
         munNi2.calcularValorTotal();
 
         //Menu economico
-        menuEconomia econo = new menuEconomia();
+        MenuEconomia econo = new MenuEconomia();
         econo.establecerNombrePlato("Agachadito: Arroz con carne asada");
         econo.establecerValorInicial(2.00);
         econo.establecerDescuentoP(15);
@@ -73,10 +72,11 @@ public class Taller11 {
         listamenu.add(munNi2);
         listamenu.add(econo);
 
-        cuenta c= new cuenta();
+        Cuenta c= new Cuenta();
 
         c.establecerListaMenu(listamenu);
-        c.establecerNombCli("Frank Sarango");
+        c.establecerIva();
+        c.establecerNombCli("Rene Elizalde");
         c.establecerValorCancelar();
 
         System.out.println(c);

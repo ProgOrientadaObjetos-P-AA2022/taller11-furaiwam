@@ -1,6 +1,6 @@
 package paquete3;
-import paquete2.menu;
-public class menuCa extends menu{
+import paquete2.Menu;
+public class MenuCa extends Menu {
     private double valorGuarnicion;
     private double valorBebida;
     private double porcentajeServicio;
@@ -31,7 +31,7 @@ public class menuCa extends menu{
                 + porcentajeServicio;
     }
     public String toString() {
-        String c = String.format("Menu a la carta\n%s\n",super.toString());
+        String c = String.format("Menu del Dia: \n%s\n",super.toString());
         c = String.format("%s\n"
                         + "Valor porcion guarnicion: %.2f\n"
                         + "Valor bebida: %.2f\n"

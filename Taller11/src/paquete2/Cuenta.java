@@ -1,10 +1,9 @@
 package paquete2;
-import paquete2.menu;
 import java.util.ArrayList;
 
-public class cuenta {
+public class Cuenta {
     private String nombCli;
-    private ArrayList<menu> listaMenu = new ArrayList<>();
+    private ArrayList<Menu> listaMenu = new ArrayList<>();
     private double valorCancelar;
     private double subTotal;
     private double iva;
@@ -12,27 +11,25 @@ public class cuenta {
     public void establecerNombCli(String n){
         nombCli = n;
     }
-    public void establecerListaMenu(ArrayList<menu> lm){
+    public void establecerListaMenu(ArrayList<Menu> lm){
         listaMenu = lm;
     }
     public void establecerSubTotal(double s){
         subTotal = s;
     }
     public void establecerIva(){
-        iva = 0.12;
+        iva = 10;
     }
     public void establecerValorCancelar(){
         for(int i = 0; i < listaMenu.size(); i++){
             subTotal = subTotal + listaMenu.get(i).obtenerValorMenu();
         }
-        iva = subTotal * iva;
-        valorCancelar = subTotal + iva;
     }
 
     public String obtenerNombCli(){
         return nombCli;
     }
-    public ArrayList<menu> obtenerListaMenu(){
+    public ArrayList<Menu> obtenerListaMenu(){
         return listaMenu;
     }
     public double obtenerValorCancelar(){
@@ -47,19 +44,17 @@ public class cuenta {
 
     @Override
     public String toString() {
-        String c = String.format("Datos de la cuenta\n"
-                        + "Nombre del cliente: %s\n"
+        String c = String.format("Factura\n"
+                        + "Cliente : %2s\n"
                 ,obtenerNombCli()
         );
 
         for(int i = 0; i < obtenerListaMenu().size();i++){
-            c = String.format("%s"
-                            + "%s\n"
+            c = String.format("%s" + "%s\n"
                     ,c
                     ,obtenerListaMenu().get(i)
             );
         }
-
         c = String.format("\n%s"
                         + "Subtotal: %.2f\n"
                         + "Iva: %.2f\n"
