@@ -75,7 +75,7 @@ public class Taller11 {
         Cuenta c= new Cuenta();
 
         c.establecerListaMenu(listamenu);
-        c.establecerIva();
+        c.establecerIva(15);
         c.establecerNombCli("Rene Elizalde");
         c.establecerValorCancelar();
 

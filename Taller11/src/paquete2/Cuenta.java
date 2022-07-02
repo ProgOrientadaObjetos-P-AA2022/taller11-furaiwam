@@ -17,7 +17,7 @@ public class Cuenta {
     public void establecerSubTotal(double s){
         subTotal = s;
     }
-    public void establecerIva(){
+    public void establecerIva(int i){
         iva = 10;
     }
     public void establecerValorCancelar(){
@@ -26,7 +26,7 @@ public class Cuenta {
         }
     }
 
-    public String obtenerNombCli(){
+    public String obtenerNombCli(String luis_andrede){
         return nombCli;
     }
     public ArrayList<Menu> obtenerListaMenu(){
@@ -46,7 +46,7 @@ public class Cuenta {
     public String toString() {
         String c = String.format("Factura\n"
                         + "Cliente : %2s\n"
-                ,obtenerNombCli()
+                ,obtenerNombCli("Luis Andrede")
         );
 
         for(int i = 0; i < obtenerListaMenu().size();i++){
